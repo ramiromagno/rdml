@@ -8,8 +8,8 @@ This package makes qPCR data, and all of its experimental settings, readily avai
 
 The files from this repository you will need to have a working package are:
 
-1. Package: `rdml.m`
-2. XML schema: `RDML_v1_2_REC.xsd`
+1. Package: `rdml.m`;
+2. XML schema: `RDML_v1_2_REC.xsd` [RDML schema version 1.2](http://rdml.org/RDML_v1_2_REC.xsd).
 
 Example dataset files that accompany this package can be found in the folder *./datasets*:
 
