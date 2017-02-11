@@ -6,10 +6,18 @@ The *rdml* importer is an open source Wolfram package that allows the validation
 
 This package makes qPCR data, and all of its experimental settings, readily available to Mathematica users without the additional burden of becoming familiarized with the RDML schema and having to learn new package-specific functions.
 
-The files from this repository you will need to have a working package:
+The files from this repository you will need to have a working package are:
 
 1. Package: `rdml.m`
 2. XML schema: `RDML_v1_2_REC.xsd`
+
+Example dataset files that accompany this package can be found in the folder *./datasets*:
+
+1. `1507AA03.rdml`, downloaded from the [RDML Consortium database](http://rdmldb.org/);
+2. `QPCRCourseApril2015_plate_1_.rdml`, from [Ruijter et al., 2015](http://dx.doi.org/10.1016/j.bdq.2015.07.001) but downloaded from [HFRC, AMC, the Netherlands](http://www.hartfaalcentrum.nl/index.php?main=files&sub=0);
+3. `rdml_data.xml`, resultant file from unzipping `QPCRCourseApril2015_plate_1_.rdml`;
+4. `rpa.rdml`, from [Raquel P. Andrade Lab, CBMR, Portugal](http://cbmr.ualg.pt/research/stemcelldevelop/temporal-control-laboratory/).
+
 
 ## Basic usage
 
