@@ -1,6 +1,6 @@
 # rdml: Mathematica package for Real-Time qPCR data
 
-![](/home/rmagno/code/mathematica/pkg/rdml/math_rdml_logo.png) 
+![](math_rdml_logo.png) 
 
 ## Overview
 
