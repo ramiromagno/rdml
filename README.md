@@ -11,7 +11,8 @@ This package makes qPCR data, and all of its experimental settings, readily avai
 The files from this repository you will need to have a working package are:
 
 1. Package: `rdml.m`;
-2. XML schema: `RDML_v1_2_REC.xsd`, from [RDML schema version 1.2](http://rdml.org/RDML_v1_2_REC.xsd).
+2. XML schema: `RDML_v1_2_REC.xsd`, from [RDML schema version 1.2](http://rdml.org/RDML_v1_2_REC.xsd);
+3. Documentation notebook: `RDML_doc.nb`.
 
 Example dataset files that accompany this package can be found in the folder *./datasets*:
 
@@ -26,10 +27,20 @@ Example dataset files that accompany this package can be found in the folder *./
 
 ### Loading the package
 
-Make sure that `rdml.m` is in your current working directory, and that `RDML_v1_2_REC.xsd` also resides in the same directory. Then, to load the package, simply run:
+Make sure that `rdml.m` is in your current working directory (if not, specify the path).
+
+Then, to load the package, simply run:
 
 ``` 
 Get["rdml.m"]
+```
+
+### Documentation
+
+Once you have loaded the package you may access the documentation notebook via the function:
+
+```
+HelpPageRDML[]
 ```
 
 ### Importing RDML data

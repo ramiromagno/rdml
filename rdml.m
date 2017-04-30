@@ -6,20 +6,23 @@
 (* :Summary: Package provides importing of RDML files (http://rdml.org/). *)
 (* :Context: rdml` *)
 (* :File: rdml.m *)
-(* :Package version: 1.0 *)
-(* :History:  Version 1.0 Feb 1 2016 *)
-(* :Mathematica version: 10.4 for Linux x86 (64-bit) *)
+(* :Package version: 1.1 Mar 30 2016 *)
+(* :Mathematica version: 11.1 for Linux x86 (64-bit) *)
 (* :Depends:
       J/Link: XML Schema validation (validateXml) and 
-              iso8601 date string conversion (toDate) *)
+              iso8601 date string conversion (toDate)                        *)
 (*    RDML Schema 1.2: RDML_v1_2_REC.xsd (http://rdml.org/RDML_v1_2_REC.xsd) *)
-(*    undocumented function Internal`StringToDouble *)
+(*    RDML documentation notebook: RDML_doc.nb                               *)
+(*    undocumented function Internal`StringToDouble                          *)
 
 
 BeginPackage["rdml`"]
 
 Needs["JLink`"]
 InstallJava[];
+
+HelpPageRDML::usage=
+"Launch the RDML documentation."
 
 Begin["Private`"]
 
@@ -30,7 +33,10 @@ version = "1.2";
 dir = DirectoryName[$InputFileName];
 
 (* xsd file absolute location *)
-xsd = dir <> "RDML_v1_2_REC.xsd";
+xsd = FileNameJoin[{dir, "RDML_v1_2_REC.xsd"}];
+
+(* path of the documentation notebook about the RDML format *)
+doc = FileNameJoin[{dir, "RDML_doc.nb"}];
 
 (* import function default options *)
 Options[import] = {
@@ -168,7 +174,9 @@ Import[name_String, opts___?OptionQ] :=
 
 Protect[Import];
 
-
+(* Trick to make Information recognize RDML symbol  *)
+(* and return its documentation page                *)
+HelpPageRDML[] := Module[{}, NotebookOpen[doc];];
 
 (* Function zipQ: tests if file is a zip file *)
 (* http://stackoverflow.com/questions/1887041/what-is-a-good-way-to-test-a-\
