@@ -23,7 +23,7 @@ Example dataset files that accompany this package can be found in the folder *./
 3. `rdml_data.xml`, resultant file from unzipping `QPCRCourseApril2015_plate_1_.rdml`;
 4. `rpa.rdml`, courtesy of [Raquel P. Andrade Lab, CBMR, Portugal](http://cbmr.ualg.pt/research/stemcelldevelop/temporal-control-laboratory/).
 
-## Citing for this work
+## Citing this work
 
 [Magno R, Duarte, I, Andrade, RP, Palmeirim, I. rdml: A Mathematica package for parsing and importing Real-Time qPCR data. BMC Research Notes. 2017; 10:208.](https://dx.doi.org/10.1186/s13104-017-2533-9)
 
